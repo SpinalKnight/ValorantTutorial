@@ -38,6 +38,8 @@ public class GunScript : MonoBehaviour
 
             else if (Input.GetKeyDown(altFire))
             {
+                bulletSpread += 0.1f;
+
                 if (curBullet <= 3)
                 {
                     for (int i = 0; i <= curBullet; i++)
@@ -51,6 +53,8 @@ public class GunScript : MonoBehaviour
                     makeBullet();
                     makeBullet();
                 }
+                bulletSpread -= 0.1f;
+
             }
         }
 
